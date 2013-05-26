@@ -1,0 +1,10 @@
+<beans>
+    <bean id="bar" class="bar.BarDriver">
+        <constructor-arg name="supportDeviceId">
+            <list>
+                <value>999-777-344</value>
+                <value>888-000-454</value>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>

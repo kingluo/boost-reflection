@@ -1,0 +1,10 @@
+<beans>
+    <bean id="driverManager" class="test.DriverManager">
+        <property name="drivers">
+            <list>
+                <ref bean="foo"/>
+                <ref bean="bar"/>
+            </list>
+        </property>
+    </bean>
+</beans>

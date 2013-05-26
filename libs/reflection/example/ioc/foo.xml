@@ -1,0 +1,10 @@
+<beans>
+    <bean id="foo" class="foo.FooDriver">
+        <constructor-arg name="supportDeviceId">
+            <list>
+                <value>000-111-222</value>
+                <value>000-111-333</value>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
