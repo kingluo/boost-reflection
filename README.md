@@ -2,19 +2,24 @@
 
 ## Introduction
 
-This library provides Java-like **Reflection API** to C++ language.
+This library provides **Java-like Reflection API** to C++ language.
 
 First, you should declare which classes to be reflected, via some simple register macros.
 
-The declarations could be at any places, even at header files following the class definitions.
+These declarations are **non-intrusive** to the reflected classes themselves, and they could be
+placed at anywhere (same **header file**, separate header file, or source file),
+as long as they appears behind the definitions of the reflected classes. 
+
+This non-intrusive feature means you could even declare and reflect classes from third-party libraries,
+which are normally read-only and closed-source binaries.
 
 Then, you could use the API to find the reflected classes by name, and use them, e.g.
 * instantiate objects
 * invoke methods upon the objects
 
 Besides the basic reflection, it has other highlighted features:
-* Java-like Annotation (could be bound on classes, constructors, methods, fields)
-* Java-like Object Proxy (C++ interface based, could be used to implement somehow AOP framework)
+* **Java-like Annotation** (could be bound on classes, constructors, methods, fields)
+* **Java-like Object Proxy** (C++ interface based, could be used to implement somehow AOP framework)
 * Support dynamic loaded library (you could reflect classes declared and compiled within libraries)
 
 ## Usage
